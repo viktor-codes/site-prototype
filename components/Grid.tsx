@@ -9,7 +9,7 @@ const Grid = () => {
                   {
                       title: "Title1",
                       description: "Description1",
-                      id: "1",
+                      id: 1,
                   },
               ].map((item, i) => (
                   <BentoGridItem 
