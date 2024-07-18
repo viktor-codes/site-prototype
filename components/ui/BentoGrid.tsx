@@ -1,14 +1,19 @@
-"use client"
+"use client";
 
+// import dynamic from "next/dynamic";
+
+import animationData from "@/data/confetti.json";
+// import Lottie from "react-lottie";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import { GlobeDemo } from "./GridGlobe";
-import { div } from "three/examples/jsm/nodes/Nodes.js";
-import Lottie from "react-lottie";
-import { useState } from "react";
-import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
+
+// const DynamicLottie = dynamic(() => import("react-lottie"), {
+//     ssr: false,
+// });
 
 export const BentoGrid = ({
     className,
@@ -38,7 +43,6 @@ export const BentoGridItem = ({
     imgClassName,
     titleClassName,
     spareImg,
-
 }: {
     className?: string;
     title?: string | React.ReactNode;
@@ -51,13 +55,12 @@ export const BentoGridItem = ({
     titleClassName?: string;
     spareImg?: string;
 }) => {
-
-    const [copied, setCopied] = useState(false)
+    const [copied, setCopied] = useState(false);
 
     const handleCopy = () => {
         navigator.clipboard.writeText("viktor.rura89@gmail.com");
         setCopied(true);
-    }
+    };
     return (
         <div
             className={cn(
@@ -97,9 +100,7 @@ export const BentoGridItem = ({
                     )}
                 </div>
                 {id === 6 && (
-                    <BackgroundGradientAnimation>
-                        
-                    </BackgroundGradientAnimation>
+                    <BackgroundGradientAnimation></BackgroundGradientAnimation>
                 )}
 
                 <div
@@ -150,7 +151,7 @@ export const BentoGridItem = ({
                     {id === 6 && (
                         <div className="mt-5 relative">
                             <div className={`absolute -bottom-5 right-o`}>
-                                <Lottie
+                                {/* <Lottie
                                     options={{
                                         loop: copied,
                                         autoplay: copied,
@@ -160,7 +161,7 @@ export const BentoGridItem = ({
                                                 "xMidYMid slice",
                                         },
                                     }}
-                                />
+                                /> */}
                             </div>
                             <MagicButton
                                 title={

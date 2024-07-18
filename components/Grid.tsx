@@ -28,7 +28,6 @@ const Grid = () => {
                         />
                     )
                 )}
-                
             </BentoGrid>
         </section>
     );

@@ -3,12 +3,11 @@ import React from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
-import { div } from "three/examples/jsm/nodes/Nodes.js";
 
 const Approach = () => {
     return (
         <section className="w-full p-20">
-            <h1 className="heading">
+            <h1 className="heading text-white">
                 My <span className="text-purple">approach</span>
             </h1>
             <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-4">
